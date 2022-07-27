@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgb(241, 218, 188);
+        }
+        
+        input {
+            margin: 2px 0;
+        }
+        
+        button {
+            border: none;
+            padding: 10px;
+            background-color: rgb(52, 52, 246);
+            color: aliceblue;
+            border-radius: 5px;
+        }
+        
+        input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        input::placeholder {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Rows and Columns - accept no. of rows and columns from user and build a table</h3>
+    <input type="text" placeholder='rows' id="rows"><br>
+    <input type="text" placeholder='cols' id="cols"><br><br>
+    <button onclick="table();">Generate Table</button><br><br>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Remove a character at the specified position of a given string and return the new string - accept the string, and the position to remove from the user</h3>
+    <input type="text" placeholder='name' id="nme"><br>
+    <input type="text" placeholder='number' id="num">
+    <br><br>
+    <button onclick="pos();">Remove character</button>
+    <p id="char"></p>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Count the number of vowels in a given string - accept the string from user</h3>
+    <button onclick="vowels();">click here</button>
+    <p id="vowels"></p>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Palindrome</h3>
+    <input type="text" placeholder='Text' id="pal"><br>
+    <br>
+    <button onclick="palindrome();">Check Palindrome</button>
+    <p id="pal2"></p>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Fibonacci Series</h3>
+    <input type="num" placeholder='Enter Number' id="fibnum"><br> <br>
+    <button onclick="fSeries();">Result</button>
+    <p id="fibo"></p>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Factorial of a number</h3>
+    <input type="num" placeholder='Enter Number' id="facnum"><br> <br>
+    <button onclick="factor();">Result</button>
+    <p id="fac"></p>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Construct a pattern (using loop) - get the total number from user</h3>
+    <input type="num" placeholder='Enter Number' id="patnum"><br> <br>
+    <button onclick="pattern();">Result</button>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Pyramid pattern (using loop)</h3>
+    <input type="num" placeholder='Enter Number' id="pyramid"><br> <br>
+    <button onclick="pyramid();">Result</button>
+    <br><br>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Prime Number (divisble by 1 and its own number)</h3>
+    <input type="num" placeholder='Enter Number' id="prime"><br> <br>
+    <button onclick="prime();">Generate Prime Numbers</button>
+    <p id="prime2"></p>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Rotate a String - accept string from user and rotate the string (if "target" entered, then it will move like argett, rgetta, gettar, etc.,</h3>
+    <input type="num" placeholder='Enter value' id="rotate"><br> <br>
+    <button onclick="rotate();">Result</button>
+    <p id="rot"></p>
+    <hr>
+    <!-- ========== Start Section ========== -->
+    <h3>Calculate the sum of n + n/2 + n/4 + n/8 + .... - accept the number from the user</h3>
+    <input type="num" placeholder='Enter value' id="sum"><br> <br>
+    <button onclick="sum();">Result</button>
+    <p id="result"></p>
+    <hr>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
