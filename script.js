@@ -1,49 +1,23 @@
-// document.write("<table border=1>");
-// let row = 1;
-// while (row <= 2) {
-//     document.write("<tr>");
-//     let column = 1;
-//     while (column <= 2) {
-//         document.write("<td>column While" + column + "</td>");
-//         column++;
-//     }
-//     document.write("</tr>");
-//     row++;
-// }
-
-// document.write("</table>");
-// //-------------------
-// document.write("<br>");
-// //----------------------------
-// //--------------------\
-// document.write("<table border=1>");
-// for (let i = 1; i <= 8; i++) {
-//     document.write("<tr>");
-//     for (let j = 1; j <= 3; j++) {
-//         document.write("<td>column " + j + "</td>");
-//     }
-//     document.write("</tr>");
-// }
-// document.write("</table>");
-// //----------------------
-// document.write("<br>");
-
-//-------------------------
 function table(a, b) {
     var a = document.getElementById("rows").value;
     var b = document.getElementById("cols").value;
+    var tab = document.getElementById("tab");
+    var text = document.createTextNode("please enter number greater than 1");
     if (a < 1 || b < 1 || a == undefined || b == undefined) {
-        document.write("please enter number greater than 1");
-    }
-    document.write("<table border=1>");
-    for (let i = 1; i <= a; i++) {
-        document.write("<tr>");
-        for (let j = 1; j <= b; j++) {
-            document.write("<td>column " + j + "</td>");
+        return tab.append(text);
+    } else {
+        let soln = "";
+        soln += "<table border=1>";
+        for (let i = 1; i <= a; i++) {
+            soln += "<tr>";
+            for (let j = 1; j <= b; j++) {
+                soln += "<td>column " + j + "</td>";
+            }
+            soln += "</tr>";
         }
-        document.write("</tr>");
+        soln += "</table>";
+        return (tab.innerHTML = soln);
     }
-    document.write("</table>");
 }
 //---------------------------------------
 document.write(
@@ -190,45 +164,53 @@ function factor(num) {
 //------------------------------------------------------------
 function pattern(num) {
     var num = document.getElementById("patnum").value;
+    var ptn1 = document.getElementById("ptn1");
     if (num == 0 || num.match(/[a-z]/gi) || num == undefined) {
-        document.write("Please enter number greater than 0");
-    }
-    for (let i = 1; i <= num; i++) {
-        for (let j = 1; j <= i; j++) {
-            document.write("^");
+        ptn1.innerHTML = "Please enter number greater than 0";
+    } else {
+        patResult = "";
+        for (let i = 1; i <= num; i++) {
+            for (let j = 1; j <= i; j++) {
+                patResult += "<span> ^ </span>";
+            }
+            patResult += "<br>";
         }
-        document.write("<br>");
+        ptn1.innerHTML = patResult;
     }
 }
 //----------------------------------------------------------
 function pyramid(num) {
     var num = document.getElementById("pyramid").value;
+    var ptn2 = document.getElementById("ptn2");
     if (num == 0 || num.match(/[a-z]/gi) || num == undefined) {
-        document.write("Please enter number greater than 1");
-    }
-    for (let i = 1; i <= num; i++) {
-        for (let j = 1; j <= num - i; j++) {
-            document.write(`&nbsp; `);
+        ptn2.innerHTML = "Please enter number greater than 1";
+    } else {
+        let res = "";
+        for (let i = 1; i <= num; i++) {
+            for (let j = 1; j <= num - i; j++) {
+                res += `&nbsp; `;
+            }
+            for (let k = 0; k < 2 * i - 1; k++) {
+                res += "*";
+            }
+            for (let j = 1; j <= num - i; j++) {
+                res += `&nbsp; `;
+            }
+            res += "<br>";
         }
-        for (let k = 0; k < 2 * i - 1; k++) {
-            document.write("*");
+        for (let i = num; i >= 1; i--) {
+            for (let j = 1; j <= num - i; j++) {
+                res += `&nbsp; `;
+            }
+            for (let k = 0; k < 2 * i - 1; k++) {
+                res += "*";
+            }
+            for (let j = 1; j <= num - i; j++) {
+                res += `&nbsp; `;
+            }
+            res += "<br>";
         }
-        for (let j = 1; j <= num - i; j++) {
-            document.write(`&nbsp; `);
-        }
-        document.write("<br>");
-    }
-    for (let i = num; i >= 1; i--) {
-        for (let j = 1; j <= num - i; j++) {
-            document.write(`&nbsp; `);
-        }
-        for (let k = 0; k < 2 * i - 1; k++) {
-            document.write("*");
-        }
-        for (let j = 1; j <= num - i; j++) {
-            document.write(`&nbsp; `);
-        }
-        document.write("<br>");
+        return (ptn2.innerHTML = res);
     }
 }
 //--------------------------------------------------------
@@ -280,3 +262,35 @@ function sum(num) {
     }
     return (total.innerText = total1);
 }
+//---------------------------
+// document.write("<table border=1>");
+// let row = 1;
+// while (row <= 2) {
+//     document.write("<tr>");
+//     let column = 1;
+//     while (column <= 2) {
+//         document.write("<td>column While" + column + "</td>");
+//         column++;
+//     }
+//     document.write("</tr>");
+//     row++;
+// }
+
+// document.write("</table>");
+// //-------------------
+// document.write("<br>");
+// //----------------------------
+// //--------------------\
+// document.write("<table border=1>");
+// for (let i = 1; i <= 8; i++) {
+//     document.write("<tr>");
+//     for (let j = 1; j <= 3; j++) {
+//         document.write("<td>column " + j + "</td>");
+//     }
+//     document.write("</tr>");
+// }
+// document.write("</table>");
+// //----------------------
+// document.write("<br>");
+
+//-------------------------
